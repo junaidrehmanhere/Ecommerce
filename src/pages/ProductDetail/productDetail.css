@@ -1,0 +1,33 @@
+.Detail-discription{
+    display: inline;
+    flex-direction: row-reverse;
+    background-color: #F7F8FF;
+    margin: 10px 20px;
+    padding: 10px 20px;
+
+}
+.product-img{
+    display: block;
+    flex-direction: initial;
+    background-color: rgb(88, 195, 195);
+    border: 1px solid black;
+  
+}
+.container{
+    display: flex;
+
+}
+/* .counter-color {
+width: 5px;
+height: 5px;
+margin: 10px 35px;
+} */
+.counter-color select{
+width: 16rem;
+height: 50px;
+margin: 10px 35px;
+}
+/* .Detail-discription button{
+    width: 25rem;
+    height: 3rem;
+} */
