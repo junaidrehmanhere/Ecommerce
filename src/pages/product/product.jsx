@@ -115,7 +115,7 @@ function Product() {
             
             <Link to={`/product-detail/${e.id}`} key={index}>
               
-                <img src={e.image} width={150} />
+                <img src={e.image}  />
              
               <h4> {e.title}</h4>
               <h6>$ {e.price}</h6>

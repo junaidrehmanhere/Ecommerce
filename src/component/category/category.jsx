@@ -17,16 +17,24 @@ function Category() {
 
   return (
     <>
-      <div >
+      <div className="category-heading">
+        <h1>Categories</h1>
+      </div>
+      <div className="category">
         {categories.map((e, i) => (
-          <Link key={i} to={`/product/${e}`} >
-            <div className="Category-list">
+          <Link key={i} to={`/product/${e}`}>
+            <div className="category-card">
+              <img
+                src="https://pyxis.nymag.com/v1/imgs/438/5e8/5c1dbeae6996745d2e01883de4255a509f-jewelry-cleaner.jpg"
+                alt=""
+                width={150}
+              />
               <h3>{e}</h3>
             </div>
           </Link>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
