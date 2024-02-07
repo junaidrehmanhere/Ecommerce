@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./category.css";
 import Footer from "../../pages/Footer/Footer";
 function Category() {
@@ -18,7 +18,7 @@ function Category() {
   return (
     <>
       <div className="category-heading">
-        <h1>Categories</h1>
+        <h1 className="feature">Categories</h1>
       </div>
       <div className="category">
         {categories.map((e, i) => (

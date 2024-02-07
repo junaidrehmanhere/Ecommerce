@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./Cart.css";
-import Footer from "../Footer/Footer";
 function Cart() {
   const cartItem = useSelector((state) => state.cart) || [];
   const dispatch = useDispatch();
@@ -29,13 +28,13 @@ function Cart() {
   return (
     <>
       {cartItem.length === 0 ? (
-        <h1
+        <h1 className="feature"
           style={{
             textAlign: "center",
             marginTop: "10%",
             fontSize: "2rem",
             color: "#747BFF",
-            marginBottom:"9%",
+            marginBottom: "9%",
           }}
         >
           Your cart is empty.
@@ -58,28 +57,27 @@ function Cart() {
               return (
                 <div key={index}>
                   <div className="cart-item">
-                      <img src={p.item.image} className="cart-img"/>
-                          <div className="cart-price">
+                    <img src={p.item.image} className="cart-img" />
+                    <div className="cart-price">
                       <h3>${p.item.price}</h3>
-                          </div>
+                    </div>
 
-                      <div className="qty-btn">
-                        {/* <button onClick={() => handleDecrement(p.item.id)} className="cart-btn">
+                    <div className="qty-btn">
+                      {/* <button onClick={() => handleDecrement(p.item.id)} className="cart-btn">
                           -
                         </button> */}
-                        <h3>{p.quantities}</h3>
-                        {/* <button onClick={() => handleIncrement(p.item.id)}className="cart-btn">
+                      <h3>{p.quantities}</h3>
+                      {/* <button onClick={() => handleIncrement(p.item.id)}className="cart-btn">
                           +
                         </button> */}
-                      </div>
-                      <h3 className="cart-amount">${totalQ}</h3>
-                    <div >
+                    </div>
+                    <h3 className="cart-amount">${totalQ}</h3>
+                    <div>
                       <FontAwesomeIcon
                         icon={faXmarkCircle}
                         className="cart-icon"
                         onClick={handleRemoveCart}
                         title="Remove Item"
-                        
                       />
                     </div>
                   </div>
@@ -89,15 +87,14 @@ function Cart() {
             return null;
           })}
           <h3 className="cart-bill">
-            <b style={{ color: "#406BD0", fontSize: "22px" }}>Total Bill:</b>$ {" "}
+            <b style={{ color: "#406BD0", fontSize: "22px" }}>Total Bill:</b>${" "}
             {totleBill}
             <Link to={"/checkout"}>
-              <button>Proceed To Checkout</button>
+              <button className="btn btn-primary">Proceed To Checkout</button>
             </Link>
           </h3>
         </div>
       )}
-      <Footer/>
     </>
   );
 }

@@ -1,6 +1,7 @@
 #navbar{
     background-color:#F7F8FF;
     padding: 1.5rem;    
+    width: 100%;
   }
   #navbar a{
     color:black;
@@ -19,42 +20,26 @@
     margin-left: 2rem;
 }
 .nav-list{
-    padding-left: 25rem;
+    padding-left: 20rem;
     padding-top:0.7rem ;
 }
 .nav-btn{
-padding-left: 8rem;
+padding-left: 18rem;
 }
 
-
-
-/* .cards{
- text-align: center;
- display:grid;
- grid-template-columns: 1fr 1fr 1fr;
-}
-.cards a{
-border: 1px solid black;
-border-radius: 22px;
-background-color: rgb(251, 244, 230);
-margin: 1rem;
-text-decoration: none;
-color: black;
-
-}  */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 20px;
 }
 
 .cards a {
   text-decoration: none;
   color: #333;
-  width: 300px;
-  margin: 15px;
-  padding: 15px;
+  width: 250px;
+  margin: 12px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
@@ -82,30 +67,4 @@ color: black;
   color: #007bff;
   font-size: 16px;
   margin: 10px 0;
-}
-.content h1{
- font-weight: bold;
- text-align: center;
- margin: 2rem;
-}
-.feature-content{
-  margin:2rem;
-  padding: 3rem 2rem;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-  text-align: center;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-}
-.feature-content img{
-  margin: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-.feature-content img:hover{
-  transform: scale(1.05);
-}
-.btn-explore{
-text-align: center;
 }

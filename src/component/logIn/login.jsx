@@ -6,8 +6,6 @@ import * as yup from "yup";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/FireBase";
 import LoggInContext from "../context/createcontext/createlogincontext";
-import Footer from "../../pages/Footer/Footer";
-
 function LogIn() {
   const [user, setUser] = useState([null]);
   const context = useContext(LoggInContext);
@@ -54,7 +52,7 @@ function LogIn() {
 
       <div className="container justify-content-center d-block w-25 border border-radius border-light rounded-sm shadow-lg p-4 mb-5 bg-white custom-class ">
         <div className="row justify-content-center">
-          <h3> LogIn Here</h3>
+          <h3 className="feature"> LogIn Here</h3>
         </div>
         <Formik
           initialValues={FormikValidation}
@@ -92,9 +90,8 @@ function LogIn() {
             </button>
           </Form>
         </Formik>
-        Don't have an account?<Link to={"/sign-up"}> Sign up</Link>
+        <p className="font-weight-bold my-2">Don't have an account?<Link to={"/sign-up"}> Sign up</Link></p>
       </div>
-        <Footer/>
     </div>
   );
 }

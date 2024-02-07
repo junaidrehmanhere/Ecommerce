@@ -1,3 +1,42 @@
-
-
- 
+.news-container{
+display: block;
+height: 350px;
+background: #292C39;
+border-radius: 2rem;
+margin: 4rem 6rem;
+/* padding: 2rem 12rem 2rem 15rem; */
+color: white;
+}
+.product-news{
+    padding: 3rem 5rem 2rem 30rem;
+}
+.news-email input{
+    height: 2.5rem;
+}
+input[type=text] {
+    border: 2px solid #898B9B;
+    border-radius: 4px;
+}
+::placeholder{
+    padding: 5px;
+    color: #898B9B;
+    font-weight:500;
+}
+ .d-category{
+height: 22rem;
+padding: 2rem 2rem;
+margin: 2rem 1rem;
+border-radius: 1.5rem;
+background: #F7F8FF;
+}
+.d-category-list a{
+text-decoration: none;
+text-transform: capitalize;
+color:#6385EE ;
+}
+.d-list{
+color: #292C39;
+}
+.d-list:hover{
+color:#6385EE ;
+}

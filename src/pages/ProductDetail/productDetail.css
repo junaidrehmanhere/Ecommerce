@@ -9,25 +9,16 @@
 .product-img{
     display: block;
     flex-direction: initial;
-    background-color: rgb(88, 195, 195);
-    border: 1px solid black;
-  
+    border: 1px solid #898B9B;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .container{
     display: flex;
 
 }
-/* .counter-color {
-width: 5px;
-height: 5px;
-margin: 10px 35px;
-} */
+
 .counter-color select{
 width: 16rem;
 height: 50px;
 margin: 10px 35px;
 }
-/* .Detail-discription button{
-    width: 25rem;
-    height: 3rem;
-} */

@@ -4,7 +4,6 @@ import axios from "axios";
 import "./productDetail.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, decrementQuantity, incrementQuantity } from "../Redux/CartRedux/CartAction";
-import Footer from "../Footer/Footer";
 function ProductDetail() {
     const nevigateto = useNavigate();
     const  param = useParams();
@@ -40,19 +39,19 @@ function ProductDetail() {
   };
   return (
     <>
-      <h1>Product Detail</h1>
+      <h1 className="feature my-4 mx-5">Product Details</h1>
       <div className="container mb-5 ">
         <img
           src={product.image}
           alt="product-detail"
-          width={300}
-          className="product-img"
+          width={400}
+          className="product-img px-4 py-4"
         />
         <div className="Detail-discription">
-          <h2>Product-ID # {product.id}</h2>
-          <h2>Category : {product.category}</h2>
-          <h2>{product.title}</h2>
-          <h2>$ {product.price}</h2>
+          <h5 className="feature">Product-ID # {product.id}</h5>
+          <h4>Category : {product.category}</h4>
+          <h4>{product.title}</h4>
+          <h5 className="feature">$ {product.price}</h5>
           <p>{product.description}</p>
           <div className="counter-color">
             {/* <input type="number"  min={1} max={12} placeholder="Qty"/> */}
@@ -69,8 +68,26 @@ function ProductDetail() {
           <button onClick={handleAddToCart} className="btn btn-primary justify-content-center m-2">Add to Cart</button>
         </div>
       </div>
+
+      <div className="container news-container ">
+      <div className="row-md-6 product-news">
+        <h1 className="feature">Stay in the Loop!</h1>
+        <h5>Subscribe to Our Newsletter for Exclusive Updates <br /> and Offers</h5>
+      <div className="news-email py-3">
+            <input
+              type="text"
+              placeholder="Your Email"
+              name="email"
+              id=""
+              size={40}
+            />
+          </div>
+          <button className="btn btn-primary py-2 px-4 font-weight-bold">
+            Subscribe
+          </button>
+      </div>
+    </div>
       {/* <button onClick={()=>{nevigateto("/order-confirm")}} className="btn btn-primary justify-content-center m-2">Order confirm</button> */}
-    <Footer/>
     </>
   );
 }

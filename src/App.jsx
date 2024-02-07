@@ -15,19 +15,21 @@ import User from "./pages/userdashboard/user";
 import SignUp from "./component/signup/signup";
 import Cart from "./pages/Cart/Cart";
 import ProtectedRoute from "./component/ProtectedRoutes/ProtectedRoute";
-import StateContext from './component/context/statecontext/statelongincontext'
+import StateContext from "./component/context/statecontext/statelongincontext";
+import Footer from "./pages/Footer/Footer";
+import GoToTop from "./component/gototop/GoToTop";
 
 function App() {
   return (
     <>
-    <StateContext>
+      <StateContext>
         <NavBar />
         <Routes>
           <Route path="/" element={<HomeCopmonent />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/home" element={<HomeCopmonent />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
-          <Route path="/product/:categories?" element={<Product />}/>
+          <Route path="/product/:categories?" element={<Product />} />
           <Route path="/order-confirm" element={<OrderConfirm />} />
           <Route path="/contact-page" element={<Contact />} />
           <Route path="/category" element={<Category />} />
@@ -50,8 +52,9 @@ function App() {
           />
           <Route path="/sign-up" element={<SignUp />} />
         </Routes>
-       
-        </StateContext>
+        <GoToTop/>
+          <Footer/>
+      </StateContext>
     </>
   );
 }

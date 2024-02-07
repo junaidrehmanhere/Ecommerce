@@ -1,0 +1,27 @@
+.go-btn{
+font-size: 2rem;
+width: 3rem;
+height: 3rem;
+color: #fff;
+background-color: rgb(59, 59, 178);
+border-radius: 50%;
+position: fixed;
+bottom: 3rem;
+right: 3rem;
+cursor: pointer;
+border: none;
+display: flex;
+justify-content: center;
+}
+
+.icon--btn{
+animation: gototop 1.0s linear infinite  alternate-reverse;
+}
+@keyframes gototop{
+    0%{
+        transform: translateY(0.5rem);
+    }
+    100%{
+        transform: translateY(1rem);
+    }
+}
